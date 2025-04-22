@@ -2,6 +2,7 @@
 '''
 import logging
 import queue
+import signal
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from threading import Event, Thread
@@ -177,7 +178,7 @@ class Analyzer:
                     'output_queue': output_queue
                 }
             )
-            for _ in range(2)
+            for _ in range(1)
         ]
         result_thread = Thread(
             target=self._accumulate_results_loop,
@@ -191,12 +192,17 @@ class Analyzer:
         get_asset_thread.start()
         get_frame_thread.start()
         for dive in dive_list:
-            dive_queue.put(dive)
+            if not self.stop_event.is_set():
+                dive_queue.put(dive)
         dive_queue.join()
         frame_queue.join()
         asset_queue.join()
         output_queue.join()
 
+    def stop(self, *_, **__):
+        self.stop_event.set()
+
+        
 def main():
     """Main thread
     """

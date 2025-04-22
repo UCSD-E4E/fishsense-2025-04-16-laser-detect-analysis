@@ -271,3 +271,4 @@ $RECYCLE.BIN/
 *.json
 # Ignore dynaconf secret files
 .secrets.*
+analysis.csv

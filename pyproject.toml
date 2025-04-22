@@ -16,11 +16,11 @@ repository = 'https://github.com/UCSD-E4E/fishsense-2025-04-16-laser-detect-anal
 [tool.poetry.dependencies]
 python = "^3.12"
 numpy = "^2.2.5"
-opencv-python = "^4.11.0.86"
 matplotlib = "^3.10.1"
 scikit-learn = "^1.6.1"
 rawpy = "^0.24.0"
-pyfishsensedev = {git = "https://github.com/UCSD-E4E/pyFishSenseDev.git", rev = "9d6c016a23c34616ebf759d648401a147571e80b"}
+# pyfishsensedev = {git = "https://github.com/UCSD-E4E/pyFishSenseDev.git", rev = "9d6c016a23c34616ebf759d648401a147571e80b"}
+opencv-python-headless = "^4.11.0.86"
 
 
 [tool.poetry.group.dev.dependencies]

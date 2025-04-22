@@ -9,7 +9,7 @@ from typing import List, Optional, Tuple
 
 import cv2 as cv
 import numpy as np
-from pyfishsensedev.laser.laser_detector import LaserDetector
+# from pyfishsensedev.laser.laser_detector import LaserDetector
 from sklearn.mixture import BayesianGaussianMixture
 
 
@@ -35,7 +35,7 @@ class PDFMultiDim():
         denom = np.sqrt((2.0 * np.pi)**d * cov_det)
         return (1.0 / denom) * np.exp(exponent)
 
-class GMMLaserDetector(LaserDetector):
+class GMMLaserDetector():
     def __init__(self):
         self.means: np.typing.ArrayLike
         self.weights: np.typing.ArrayLike

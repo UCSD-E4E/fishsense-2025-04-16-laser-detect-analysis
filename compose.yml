@@ -1,0 +1,15 @@
+services:
+  analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./model.json:/app/model.json:ro
+      - ./analysis.csv:/app/analysis.csv:rw
+      - ./.secrets.toml:/e4efs/config/.secrets.toml:ro
+      - ./settings.toml:/e4efs/config/settings.toml:ro
+    deploy:
+      resources:
+        limits:
+          cpus: 6
+          memory: 4G
