@@ -1,2 +1,2 @@
 # FishSense Laser Detection Analysis
-Original Author: @bmccalmon
+Original Author: Ben McCalmon, Tom Zhang
