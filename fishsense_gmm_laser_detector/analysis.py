@@ -178,7 +178,7 @@ class Analyzer:
                     'output_queue': output_queue
                 }
             )
-            for _ in range(1)
+            for _ in range(2)
         ]
         result_thread = Thread(
             target=self._accumulate_results_loop,

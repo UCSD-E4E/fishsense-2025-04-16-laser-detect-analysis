@@ -111,6 +111,7 @@ def configure_logging():
     logging_levels: Dict[str, str] = {
         'PIL.TiffImagePlugin': 'INFO',
         'httpcore.http11': 'INFO',
+        'urllib3.connectionpool': 'INFO'
     }
     for logger_name, level in logging_levels.items():
         logger = logging.getLogger(logger_name)

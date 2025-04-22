@@ -13,3 +13,4 @@ services:
         limits:
           cpus: 32
           memory: 8G
+    user: "${USER_ID}:${GROUP_ID}"
