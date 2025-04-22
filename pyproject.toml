@@ -31,6 +31,12 @@ autopep8 = "^2.3.1"
 coverage = "^7.6.1"
 
 
+
+[tool.poetry.group.analyze.dependencies]
+requests = "^2.32.3"
+matplotlib = "^3.10.1"
+dynaconf = "^3.2.10"
+
 [tool.semantic_release]
 version_variables = ["fishsense_gmm_laser_detector/__init__.py:__version__"]
 version_toml = [
