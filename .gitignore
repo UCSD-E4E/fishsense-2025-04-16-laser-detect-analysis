@@ -272,3 +272,5 @@ $RECYCLE.BIN/
 # Ignore dynaconf secret files
 .secrets.*
 analysis.csv
+images
+spots
